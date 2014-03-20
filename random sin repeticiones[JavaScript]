@@ -1,24 +1,23 @@
-var guarda_numeros = new Array(52);
-            var comprueba_numeros = new Array(52);
+            var guarda_numeros = new Array(52); //Array dónde iremos guardando los números
+            var comprueba_numeros = new Array(52); //Array dónde guardaremos true, si se ha visitado, false en caso contrario
         
-        	for (var ella = 0; ella < 52; ++ella) {
-            	comprueba_numeros[ella] = false;
+        
+        	for (var i = 0; i < 52; ++i) {
+            	comprueba_numeros[i] = false;
             }
             
-          
+               /*Pre: 0<= numero < 52*/
        	   function comprueba_si_esta(numero) {
-       	   //Post: En res estará el resultado. True si el número está en el array, 
-       	   //false en caso contrario
-    			var res = false;
-            	for(var foo = 0; (foo < 52) && (res == false) ; ++foo){
-            		if((comprueba_numeros[foo] == true) && (foo == numero)) {
+       	   /*Post: En res estará el resultado. True si el número está en el array, 
+       	   false en caso contrario*/
+    		var res = false;
+            	for(var j = 0; (j < 52) && (res == false) ; ++foo){
+            		if((comprueba_numeros[j] == true) && (j == numero)) {
             		res = true;
-            		
             		}
             	}
             	return res;
             }
-           
             var pos_guarda = 0;
             var nuevo_num;
              
