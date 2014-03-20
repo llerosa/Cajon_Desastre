@@ -1,0 +1,41 @@
+var guarda_numeros = new Array(52);
+            var comprueba_numeros = new Array(52);
+        
+        	for (var ella = 0; ella < 52; ++ella) {
+            	comprueba_numeros[ella] = false;
+            }
+            
+          
+       	   function comprueba_si_esta(numero) {
+       	   //Post: En res estará el resultado. True si el número está en el array, 
+       	   //false en caso contrario
+    			var res = false;
+            	for(var foo = 0; (foo < 52) && (res == false) ; ++foo){
+            		if((comprueba_numeros[foo] == true) && (foo == numero)) {
+            		res = true;
+            		
+            		}
+            	}
+            	return res;
+            }
+           
+            var pos_guarda = 0;
+            var nuevo_num;
+             
+             
+            while(pos_guarda < 52){
+
+                nuevo_num = Math.floor(Math.random()*52);
+                var comprueba = comprueba_si_esta(nuevo_num);
+            	while(comprueba){
+            		nuevo_num = Math.floor(Math.random()*52);
+            		comprueba = comprueba_si_esta(nuevo_num);
+            	}
+            	
+            	guarda_numeros[pos_guarda] = nuevo_num;
+            	comprueba_numeros[nuevo_num] = true;
+            
+            	++pos_guarda;
+            }
+         
+        	
