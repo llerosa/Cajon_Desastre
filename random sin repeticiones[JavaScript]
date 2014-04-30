@@ -11,7 +11,7 @@
        	   /*Post: En res estará el resultado. True si el número está en el array, 
        	   false en caso contrario*/
     		var res = false;
-            	for(var j = 0; (j < 52) && (res == false) ; ++foo){
+            	for(var j = 0; (j < 52) && (res == false) ; ++j){
             		if((comprueba_numeros[j] == true) && (j == numero)) {
             		res = true;
             		}
